@@ -294,7 +294,7 @@ export default class Color {
         this._alpha = 100
       }
       if (parts.length >= 3) {
-        const { h, s, v } = rgb2hsv(parts[0], parts[1], parts[2])
+        const { h, s, v } = rgb2hsv(parts[0] || 0, parts[1] || 0, parts[2] || 0)
         fromHSV(h, s, v)
       }
     } else if (value.includes('#')) {
