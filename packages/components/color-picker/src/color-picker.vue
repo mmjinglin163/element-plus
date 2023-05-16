@@ -3,7 +3,7 @@
     ref="popper"
     :visible="showPicker"
     :show-arrow="false"
-    :fallback-placements="['bottom', 'top', 'right', 'left']"
+    :placement="placement"
     :offset="0"
     :gpu-acceleration="false"
     :popper-class="[ns.be('picker', 'panel'), ns.b('dropdown'), popperClass]"
