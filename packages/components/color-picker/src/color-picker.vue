@@ -32,6 +32,7 @@
               v-model="customInput"
               :validate-event="false"
               size="small"
+              :formatter="(value) => `${value}`.replace(/[c-fh-qs-z]/gi, '')"
               @keyup.enter="handleConfirm"
               @blur="handleConfirm"
             />

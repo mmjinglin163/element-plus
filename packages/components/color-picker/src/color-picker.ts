@@ -65,7 +65,6 @@ export const colorPickerProps = buildProps({
     type: Boolean,
     default: true,
   },
-
   placement: {
     type: String,
     default: 'right',
