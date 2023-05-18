@@ -46,7 +46,7 @@
             {{ t('el.colorpicker.clear') }}
           </el-button>
           <el-button
-            plain
+            type="primary"
             size="small"
             :class="ns.be('dropdown', 'btn')"
             @click="confirmValue"
