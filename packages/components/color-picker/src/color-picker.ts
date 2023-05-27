@@ -65,6 +65,10 @@ export const colorPickerProps = buildProps({
     type: Boolean,
     default: true,
   },
+  placement: {
+    type: String,
+    default: 'right',
+  },
 } as const)
 export const colorPickerEmits = {
   [UPDATE_MODEL_EVENT]: (val: string | null) => isString(val) || isNil(val),
