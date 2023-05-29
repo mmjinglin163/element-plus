@@ -18,7 +18,7 @@
       @keydown.enter="decrease"
     >
       <el-icon>
-        <arrow-down v-if="controlsAtRight" />
+        <caret-bottom v-if="controlsAtRight" />
         <minus v-else />
       </el-icon>
     </span>
@@ -31,7 +31,7 @@
       @keydown.enter="increase"
     >
       <el-icon>
-        <arrow-up v-if="controlsAtRight" />
+        <caret-top v-if="controlsAtRight" />
         <plus v-else />
       </el-icon>
     </span>
@@ -79,7 +79,7 @@ import {
   isUndefined,
   throwError,
 } from '@element-plus/utils'
-import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
+import { CaretBottom, CaretTop, Minus, Plus } from '@element-plus/icons-vue'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
