@@ -55,6 +55,14 @@
         <!-- suffix slot -->
         <span v-if="suffixVisible" :class="nsInput.e('suffix')">
           <span :class="nsInput.e('suffix-inner')" @click="focus">
+            <el-icon
+              v-if="showClear"
+              :class="[nsInput.e('icon'), nsInput.e('clear')]"
+              @mousedown.prevent="NOOP"
+              @click="clear"
+            >
+              <circle-close-filled />
+            </el-icon>
             <template
               v-if="!showClear || !showPwdVisible || !isWordLimitVisible"
             >
@@ -63,14 +71,6 @@
                 <component :is="suffixIcon" />
               </el-icon>
             </template>
-            <el-icon
-              v-if="showClear"
-              :class="[nsInput.e('icon'), nsInput.e('clear')]"
-              @mousedown.prevent="NOOP"
-              @click="clear"
-            >
-              <circle-close />
-            </el-icon>
             <el-icon
               v-if="showPwdVisible"
               :class="[nsInput.e('icon'), nsInput.e('password')]"
@@ -154,7 +154,7 @@ import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
 import { ElIcon } from '@element-plus/components/icon'
 import {
-  CircleClose,
+  CircleCloseFilled,
   Hide as IconHide,
   View as IconView,
 } from '@element-plus/icons-vue'
