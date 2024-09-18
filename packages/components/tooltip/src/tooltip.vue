@@ -191,5 +191,9 @@ defineExpose({
    * @description expose hide function
    */
   hide,
+  /**
+   * @description expose hide function
+   */
+  show,
 })
 </script>

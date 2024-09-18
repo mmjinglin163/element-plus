@@ -91,6 +91,10 @@ const hide = () => {
   tooltipRef.value?.hide()
 }
 
+const show = () => {
+  tooltipRef.value?.show()
+}
+
 const beforeEnter = () => {
   emit('before-enter')
 }
@@ -112,5 +116,7 @@ defineExpose({
   popperRef,
   /** @description hide popover */
   hide,
+  /** @description show popover */
+  show,
 })
 </script>
